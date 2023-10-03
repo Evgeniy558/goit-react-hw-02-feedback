@@ -53,6 +53,7 @@ class App extends Component {
 
   render() {
     const { good, neutral, bad, feedbackTotal } = this.state;
+
     return (
       <section className={css.main_section}>
         <Section title="Please leave feedback">
@@ -71,7 +72,7 @@ class App extends Component {
             id="bad"
             children={DEFAULT_BUTTONS_NAME.bad}
           >
-            Bad{" "}
+            Bad
           </FeedbackOptions>
         </Section>
 
@@ -84,7 +85,6 @@ class App extends Component {
               gap: "10px",
             }}
           >
-            {" "}
             {feedbackTotal > 0 ? (
               <>
                 <Statistics children="Good" feedBacksData={good} />
@@ -100,7 +100,7 @@ class App extends Component {
               </>
             ) : (
               <>
-                <Notification message="There is no feedback." />
+                <Notification>There is no feedback.</Notification>
               </>
             )}
           </div>

@@ -1,9 +1,9 @@
 import css from "./notification.module.css";
-const Notification = ({ message }) => {
+const Notification = ({ children }) => {
   return (
-    <div className={css.notification}>
-      <>{message}</>
-    </div>
+    <p className={css.notification}>
+      <>{children}</>
+    </p>
   );
 };
 export default Notification;
